@@ -1,0 +1,112 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:#6609e0;
+}
+form{
+    background: #fff;
+    width: 450px;
+    padding: 30px;
+    border-radius: 5px;
+}
+form header{
+    color: #6609e0;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+}
+form .url-input{
+    margin: 30px 0;
+}
+.url-input .title{
+    font-size: 18px;
+    color: #373737;
+}
+.url-input .filed{
+    height: 50px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+}
+.url-input .filed input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding: 0 15px;
+    background: #f1f1f7;
+    border-bottom: 2px solid #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.url-input .filed .bottom-line{
+    height: 2px;
+    width: 100%;
+    background: #6609e0;
+    position: absolute;
+    bottom: 0;left: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+.url-input .filed input:focus ~ .bottom-line,
+.url-input .filed input:valid ~ .bottom-line{
+    transform: scale(1);
+}
+form .previw-are {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px dashed #7d2ae8;
+}
+.previw-are.active{
+    bottom: none;
+}
+.previw-are .thumbnail{
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+.previw-are.active .thumbnail{
+    display: block;
+}
+.previw-are .icon{
+    color: #7d2ae8;
+    font-size: 80px;
+}
+.previw-are span{
+    color: #7d2ae8;
+    margin-top: 25px;
+}
+.previw-are.active .icon,
+.previw-are.active span{
+    display: none;
+}
+form .download-btn{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    bottom: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    background: #7d2ae8;
+    border-radius: 5px;
+    margin: 30px 0 20px 0;
+}
